@@ -9,10 +9,10 @@ import javafx.stage.Stage;
 public class Main extends Application {
 
     @Override
-    public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+    public void start(Stage primaryStage) throws Exception {
+        Parent root = (Parent)FXMLLoader.load(this.getClass().getResource("sample.fxml"));
         primaryStage.setTitle("Primer Programa");
-        primaryStage.setScene(new Scene(root, 500, 500));
+        primaryStage.setScene(new Scene(root, 500.0D, 500.0D));
         primaryStage.show();
     }
 

@@ -1,17 +1,24 @@
 package sample;
 
+import converciones.Convercion;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
 public class Controller {
-    @FXML TextField txtEdad;
-    @FXML Label lblTitulo;
+    @FXML
+    TextField txtEdad;
+    @FXML
+    Label lblTitulo;
 
-    public void evento1(ActionEvent event){
-int dias =Integer.parseInt(txtEdad.getText())*365;
-lblTitulo.setText("Has Vivido "+dias+" dias ");
+    public Controller() {
     }
 
+    public void evento1(ActionEvent event) {
+        Convercion td=new Convercion();
+        int numero = Integer.parseInt(this.txtEdad.getText());
+        String res = td.binario(numero);
+        this.lblTitulo.setText(res);
+    }
 }
